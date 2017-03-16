@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace ae3210_LitJump {
@@ -12,6 +8,9 @@ namespace ae3210_LitJump {
         int WIDTH = 64, HEIGHT = 64;
         Vector2 position;
         float velocity;
+
+        bool onGround;
+        bool killed;
 
         World world;
         PlayerIndex playerIndex;
@@ -22,6 +21,13 @@ namespace ae3210_LitJump {
             this.position = position;
             playerIndex = pindex;
             playerInput = pinput;
+        }
+
+        public void IsColliding() {
+            Rectangle result = new Rectangle();
+            if (world.IsColliding(drawBox, ref result)) {
+                killed = true;
+            }
         }
 
         public void Update(float delta) {
@@ -37,18 +43,23 @@ namespace ae3210_LitJump {
             if(world.IsColliding(drawBox, ref result)) {
                 position.Y = result.Top;
                 velocity = 0;
+                onGround = true;
             }
 
-            if (InputHandler.GetButtonState(playerIndex, playerInput) == InputState.Pressed) {
+            //MoveX
+
+            if (InputHandler.GetButtonState(playerIndex, playerInput) == InputState.Pressed && onGround) {
                 velocity = -25;
+                onGround = false;
             }
-
 
             drawBox.X = (int)(position.X - WIDTH / 2f);
             drawBox.Y = (int)(position.Y - HEIGHT);
         }
 
         public override void Render(SpriteBatch spriteBatch) {
+            if (killed)
+                return;
             base.Render(spriteBatch);
         }
     }

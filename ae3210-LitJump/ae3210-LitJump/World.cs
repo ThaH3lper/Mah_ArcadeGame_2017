@@ -1,10 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ae3210_LitJump {
     class World {
@@ -24,6 +21,13 @@ namespace ae3210_LitJump {
         public void Update(float delta) {
             foreach (Hero h in heroes)
                 h.Update(delta);
+
+            foreach (Box b in gameObjects)
+                b.Update(delta);
+
+            foreach (Hero h in heroes)
+                h.IsColliding();
+
             if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Down)
                 slowmotion = 0.3f;
             else
@@ -56,7 +60,5 @@ namespace ae3210_LitJump {
             heroes.Add(new Hero(this, new Vector2(100 + players * 70, 100), pindex, pinput));
             players++;
         }
-
-
     }
 }

@@ -1,9 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ae3210_LitJump {
     class Box {
@@ -25,6 +21,10 @@ namespace ae3210_LitJump {
             sourceBox = drawBox;
             this.color = color;
             this.texture = texture;
+        }
+
+        public virtual void Update(float delta) {
+
         }
 
         public Rectangle getDrawBox() {

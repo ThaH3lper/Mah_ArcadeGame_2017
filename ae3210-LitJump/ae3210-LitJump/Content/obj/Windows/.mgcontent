@@ -4,7 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/pixel.png</File>
-    <File>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/abuttons.png</File>
+    <File>E:/SourceTree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/pixel.png</File>
+    <File>E:/SourceTree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/abuttons.png</File>
   </SourceFiles>
 </SourceFileCollection>
