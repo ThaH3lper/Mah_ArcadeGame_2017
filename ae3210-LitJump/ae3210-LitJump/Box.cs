@@ -27,6 +27,10 @@ namespace ae3210_LitJump {
             this.texture = texture;
         }
 
+        public Rectangle getDrawBox() {
+            return drawBox;
+        }
+
         public void SetTexture(string texture) {
             this.texture = texture;
         }

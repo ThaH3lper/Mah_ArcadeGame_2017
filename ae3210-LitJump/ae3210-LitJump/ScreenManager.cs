@@ -11,6 +11,8 @@ namespace ae3210_LitJump {
 
         static BaseScreen currentScreen;
 
+        public static GraphicsDeviceArcade graphicDevice;
+
         public static void AddScreen(string key, BaseScreen screen) {
             screens.Add(key, screen);
         }

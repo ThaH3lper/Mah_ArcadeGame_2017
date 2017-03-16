@@ -24,6 +24,7 @@ namespace ae3210_LitJump {
             ScreenManager.AddScreen("game", new GameScreen());
 
             ScreenManager.SetCurrentScreen("load");
+            ScreenManager.graphicDevice = GraphicsDevice;
 
             base.Initialize();
         }
@@ -34,6 +35,7 @@ namespace ae3210_LitJump {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 #endif
             ContentManager.AddTexture("pixel", Content.Load<Texture2D>("pixel"));
+            ContentManager.AddTexture("abutton", Content.Load<Texture2D>("abuttons"));
         }
 
         protected override void UnloadContent() {
@@ -50,9 +52,7 @@ namespace ae3210_LitJump {
         }
 
         protected override void Draw(GameTime gameTime) {
-            GraphicsDevice.Clear(Color.White);
-
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             ScreenManager.Render(spriteBatch);
             spriteBatch.End();
 
