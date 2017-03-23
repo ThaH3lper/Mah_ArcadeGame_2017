@@ -9,6 +9,9 @@ namespace ae3210_LitJump {
 
         public static int SCREEN_WIDTH = 1920;
         public static int SCREEN_HEIGHT = 1080;
+        public static int FLOOR_HEIGHT = 100;
+
+        public static Random R = new Random();
 
         public static Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
 

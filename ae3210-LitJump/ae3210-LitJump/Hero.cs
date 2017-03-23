@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace ae3210_LitJump {
     class Hero : Box{
@@ -33,8 +34,8 @@ namespace ae3210_LitJump {
         public void Update(float delta) {
 
             //CheckY
-            velocity = velocity + GRAVITY * delta;
-            position.Y += velocity;
+            velocity = velocity + GRAVITY * GRAVITY * delta;
+            position.Y += velocity * delta;
 
             drawBox.X = (int)(position.X - WIDTH / 2f);
             drawBox.Y = (int)(position.Y - HEIGHT);
@@ -44,13 +45,18 @@ namespace ae3210_LitJump {
                 position.Y = result.Top;
                 velocity = 0;
                 onGround = true;
+            } else if(velocity > 50){
+                onGround = false;
             }
 
             //MoveX
 
             if (InputHandler.GetButtonState(playerIndex, playerInput) == InputState.Pressed && onGround) {
-                velocity = -25;
+                velocity = -1200;
                 onGround = false;
+            }
+            else if(InputHandler.GetButtonState(playerIndex, playerInput) == InputState.Pressed) {
+                velocity += 1200;
             }
 
             drawBox.X = (int)(position.X - WIDTH / 2f);
@@ -62,5 +68,7 @@ namespace ae3210_LitJump {
                 return;
             base.Render(spriteBatch);
         }
+
+        public bool IsDead() { return killed; }
     }
 }

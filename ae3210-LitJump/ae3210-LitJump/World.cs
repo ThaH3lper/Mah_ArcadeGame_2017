@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using ae3210_LitJump.Object;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
@@ -12,27 +13,52 @@ namespace ae3210_LitJump {
         int players = 0;
         float slowmotion;
         Box clearScreen;
+        bool gameStarted;
+
+        float slowmotionTime;
+
+        float INTERVAL = 3, current = 0;
 
         public World() {
-            gameObjects.Add(new Box(0, ContentManager.SCREEN_HEIGHT - 100, ContentManager.SCREEN_WIDTH, 100, Color.Red));
+            gameObjects.Add(new Box(0, ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT, ContentManager.SCREEN_WIDTH, ContentManager.FLOOR_HEIGHT, Color.Red));
             clearScreen = new Box(0, 0, ContentManager.SCREEN_WIDTH, ContentManager.SCREEN_HEIGHT, Color.FromNonPremultiplied(255, 255, 255, 50));
+            slowmotion = 1f;
         }
 
         public void Update(float delta) {
-            foreach (Hero h in heroes)
-                h.Update(delta);
-
-            foreach (Box b in gameObjects)
-                b.Update(delta);
-
-            foreach (Hero h in heroes)
-                h.IsColliding();
+            delta *= slowmotion;
+            if (gameStarted) {
+                current += delta * MovingObject.SPEED / 300f;
+                if (current > INTERVAL) {
+                    current = 0;
+                    gameObjects.Add(new MovingObject());
+                    MovingObject.SPEED += 40;
+                }
+            }
 
             if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Down)
                 slowmotion = 0.3f;
             else
                 slowmotion = 1f;
 
+            List<Hero> killed = new List<Hero>();
+            foreach (Hero h in heroes) {
+                h.Update(delta);
+                if (h.IsDead()) {
+                    killed.Add(h);
+                    slowmotionTime = 2f;
+                }       
+            }
+            foreach (Hero h in killed)
+                heroes.Remove(h);
+            killed.Clear();
+
+
+            foreach (Box b in gameObjects)
+            b.Update(delta);
+
+            foreach (Hero h in heroes)
+                h.IsColliding();
         }
 
         public bool IsColliding(Rectangle rec, ref Rectangle collide) {
@@ -59,6 +85,10 @@ namespace ae3210_LitJump {
         public void AddPlayer(PlayerIndex pindex, PlayerInput pinput) {
             heroes.Add(new Hero(this, new Vector2(100 + players * 70, 100), pindex, pinput));
             players++;
+        }
+
+        public void StartGame() {
+            gameStarted = true;
         }
     }
 }

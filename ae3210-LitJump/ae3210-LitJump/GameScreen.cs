@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,10 +37,16 @@ namespace ae3210_LitJump {
         }
 
         public void Update(float delta) {
-            inputController.Update();
             world.Update(delta);
-            if (joinScreen)
+            if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed) {
+                joinScreen = false;
+                world.StartGame();
+            }
+            if (joinScreen) {
+                world.Update(delta);
                 joinOverlay.Update(delta);
+                inputController.Update();
+            }
         }
     }
 }
