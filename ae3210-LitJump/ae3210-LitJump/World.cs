@@ -26,6 +26,13 @@ namespace ae3210_LitJump {
         }
 
         public void Update(float delta) {
+
+            if (slowmotionTime > 0) {
+                slowmotion = 0.3f;
+                slowmotionTime -= delta;
+            } else
+                slowmotion = 1f;
+
             delta *= slowmotion;
             if (gameStarted) {
                 current += delta * MovingObject.SPEED / 300f;
@@ -36,23 +43,17 @@ namespace ae3210_LitJump {
                 }
             }
 
-            if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Down)
-                slowmotion = 0.3f;
-            else
-                slowmotion = 1f;
-
             List<Hero> killed = new List<Hero>();
             foreach (Hero h in heroes) {
                 h.Update(delta);
                 if (h.IsDead()) {
                     killed.Add(h);
-                    slowmotionTime = 2f;
+                    slowmotionTime = 5f;
                 }       
             }
             foreach (Hero h in killed)
                 heroes.Remove(h);
             killed.Clear();
-
 
             foreach (Box b in gameObjects)
             b.Update(delta);
