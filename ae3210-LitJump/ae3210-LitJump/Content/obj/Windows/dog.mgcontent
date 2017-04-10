@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/pixel.png</SourceFile>
-  <SourceTime>2015-03-04T16:40:21.951979+01:00</SourceTime>
-  <DestFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/pixel.xnb</DestFile>
-  <DestTime>2017-04-10T16:22:08.105954+02:00</DestTime>
+  <SourceFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/dog.png</SourceFile>
+  <SourceTime>2017-04-10T16:31:37.4522539+02:00</SourceTime>
+  <DestFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/dog.xnb</DestFile>
+  <DestTime>2017-04-10T16:55:09.8888338+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2015-04-29T19:14:44+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

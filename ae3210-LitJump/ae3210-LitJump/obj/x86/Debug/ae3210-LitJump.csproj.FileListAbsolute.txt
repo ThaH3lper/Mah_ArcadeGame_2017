@@ -54,3 +54,8 @@ E:\SourceTree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX
 E:\SourceTree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\obj\x86\Debug\ae3210-LitJump.csprojResolveAssemblyReference.cache
 E:\SourceTree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\obj\x86\Debug\ae3210-LitJump.dll
 E:\SourceTree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\obj\x86\Debug\ae3210-LitJump.pdb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\dog.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\eyebrow.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\ground.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\poop.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\top.xnb

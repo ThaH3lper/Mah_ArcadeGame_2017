@@ -53,6 +53,11 @@ namespace ae3210_LitJump {
                 a.Render(spriteBatch);
         }
 
+        public void Clear() {
+            foreach (ArcadeButton a in buttons)
+                a.setActive(false);
+        }
+
         public void Update() {
             if (!activated)
                 return;

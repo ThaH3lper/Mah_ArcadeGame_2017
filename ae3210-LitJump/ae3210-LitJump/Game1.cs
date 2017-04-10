@@ -36,6 +36,11 @@ namespace ae3210_LitJump {
 #endif
             ContentManager.AddTexture("pixel", Content.Load<Texture2D>("pixel"));
             ContentManager.AddTexture("abutton", Content.Load<Texture2D>("abuttons"));
+            ContentManager.AddTexture("dog", Content.Load<Texture2D>("dog"));
+            ContentManager.AddTexture("eyebrow", Content.Load<Texture2D>("eyebrow"));
+            ContentManager.AddTexture("ground", Content.Load<Texture2D>("ground"));
+            ContentManager.AddTexture("poop", Content.Load<Texture2D>("poop"));
+            ContentManager.AddTexture("top", Content.Load<Texture2D>("top"));
         }
 
         protected override void UnloadContent() {

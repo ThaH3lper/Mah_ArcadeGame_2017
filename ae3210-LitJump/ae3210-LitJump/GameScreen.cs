@@ -13,10 +13,8 @@ namespace ae3210_LitJump {
         InputController inputController;
         JoinOverlay joinOverlay;
 
-        bool joinScreen = true;
-
         public GameScreen() {
-            world = new World();
+            world = new World(this);
             inputController = new InputController(world);
             joinOverlay = new JoinOverlay();
         }
@@ -26,7 +24,7 @@ namespace ae3210_LitJump {
 
         public void Render(SpriteBatch spriteBatch) {
             world.Render(spriteBatch);
-            if (joinScreen) {
+            if (world.dog.GetState() == DogState.POOPING) {
                 joinOverlay.Render(spriteBatch);
                 inputController.Render(spriteBatch);
             }
@@ -36,14 +34,16 @@ namespace ae3210_LitJump {
 
         }
 
+        public void ClearControllers() {
+            inputController.Clear();
+        }
+
         public void Update(float delta) {
             world.Update(delta);
             if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed) {
-                joinScreen = false;
-                world.StartGame();
+                world.dog.setNextState(DogState.FLY_AWAY);
             }
-            if (joinScreen) {
-                world.Update(delta);
+            if (world.dog.GetState() == DogState.POOPING) {
                 joinOverlay.Update(delta);
                 inputController.Update();
             }

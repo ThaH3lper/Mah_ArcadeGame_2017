@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>E:/SourceTree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/abuttons.png</SourceFile>
-  <SourceTime>2017-03-16T19:11:00.0910218+01:00</SourceTime>
-  <DestFile>E:/SourceTree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/abuttons.xnb</DestFile>
-  <DestTime>2017-03-16T19:22:13.8605978+01:00</DestTime>
+  <SourceFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/abuttons.png</SourceFile>
+  <SourceTime>2017-03-15T20:13:57.8654055+01:00</SourceTime>
+  <DestFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/abuttons.xnb</DestFile>
+  <DestTime>2017-04-10T16:22:08.1278211+02:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
+  <ImporterTime>2015-04-29T19:14:44+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
+  <ProcessorTime>2015-04-29T19:14:44+02:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

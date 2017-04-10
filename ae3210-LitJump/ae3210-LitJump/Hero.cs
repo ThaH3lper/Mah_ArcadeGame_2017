@@ -17,9 +17,10 @@ namespace ae3210_LitJump {
         PlayerIndex playerIndex;
         PlayerInput playerInput;
 
-        public Hero(World world, Vector2 position, PlayerIndex pindex, PlayerInput pinput) : base(0, 0, 64, 64, Color.Green) {
+        public Hero(World world, Vector2 position, PlayerIndex pindex, PlayerInput pinput) : base(0, 0, 64, 64, Color.White, "poop") {
             this.world = world;
             this.position = position;
+            sourceBox = new Rectangle(0, 0, 100, 100);
             playerIndex = pindex;
             playerInput = pinput;
         }
@@ -31,7 +32,7 @@ namespace ae3210_LitJump {
             }
         }
 
-        public void Update(float delta) {
+        public override void Update(float delta) {
 
             //CheckY
             velocity = velocity + GRAVITY * GRAVITY * delta;

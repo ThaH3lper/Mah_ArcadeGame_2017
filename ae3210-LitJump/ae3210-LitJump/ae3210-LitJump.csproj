@@ -41,6 +41,7 @@
     <Compile Include="BaseScreen.cs" />
     <Compile Include="Box.cs" />
     <Compile Include="ContentManager.cs" />
+    <Compile Include="Dog.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameScreen.cs" />
     <Compile Include="Hero.cs" />

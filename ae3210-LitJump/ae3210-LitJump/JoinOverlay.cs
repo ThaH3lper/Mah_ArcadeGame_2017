@@ -18,7 +18,7 @@ namespace ae3210_LitJump {
         }
 
         public void Render(SpriteBatch spriteBatch) {
-            halfSide.Render(spriteBatch);
+            //halfSide.Render(spriteBatch);
         }
     }
 }
