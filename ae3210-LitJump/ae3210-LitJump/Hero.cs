@@ -32,6 +32,11 @@ namespace ae3210_LitJump {
             }
         }
 
+        public Vector2 PositionButtom()
+        {
+            return new Vector2(position.X + drawBox.Width / 2, position.Y);
+        }
+
         public override void Update(float delta) {
 
             //CheckY
@@ -55,6 +60,7 @@ namespace ae3210_LitJump {
             if (InputHandler.GetButtonState(playerIndex, playerInput) == InputState.Pressed && onGround) {
                 velocity = -1200;
                 onGround = false;
+                world.particleManager.SpawnUp(position + new Vector2(0, -10));
             }
             else if(InputHandler.GetButtonState(playerIndex, playerInput) == InputState.Pressed) {
                 velocity += 1200;

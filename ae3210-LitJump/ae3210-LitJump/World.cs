@@ -20,6 +20,8 @@ namespace ae3210_LitJump {
 
         float INTERVAL = 3, current = 0;
 
+        public ParticleManager particleManager;
+
         public Dog dog;
         private GameScreen screen;
 
@@ -30,6 +32,7 @@ namespace ae3210_LitJump {
             clearScreen = new Box(0, 0, ContentManager.SCREEN_WIDTH, ContentManager.SCREEN_HEIGHT, Color.FromNonPremultiplied(255, 255, 255, 50));
             slowmotion = 1f;
             dog = new Dog();
+            particleManager = new ParticleManager();
         }
 
         public void Update(float delta) {
@@ -79,6 +82,7 @@ namespace ae3210_LitJump {
             deleteHeros.Clear();
 
             dog.Update(delta);
+            particleManager.Update(delta);
         }
 
         private void GameOver() {
@@ -113,6 +117,7 @@ namespace ae3210_LitJump {
                 dog.GetState() != DogState.SLIDE_OUT) {
                 dog.Render(spriteBatch);
             }
+            particleManager.Render(spriteBatch);
             top.Render(spriteBatch);
             if(dog.GetState() == DogState.SLIDE_IN ||
                 dog.GetState() == DogState.EYEBROW ||

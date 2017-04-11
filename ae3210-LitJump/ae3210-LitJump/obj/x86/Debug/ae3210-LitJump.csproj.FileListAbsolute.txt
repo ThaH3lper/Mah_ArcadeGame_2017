@@ -59,3 +59,37 @@ D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bi
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\ground.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\poop.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\top.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\abuttons.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\dog.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\eyebrow.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\ground.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\pixel.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\poop.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\top.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\PreviewData\GamePreviewInfoImage.png
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\AssemblyInfo.txt
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Settings.txt
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\ae3210-LitJump.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\ae3210-LitJump.pdb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\MonoGame.Framework.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.MediaFoundation.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.XAudio2.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.Direct3D11.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.DXGI.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.Direct2D1.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.RawInput.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.Direct3D9.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\MonoGame.Framework.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.MediaFoundation.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.XAudio2.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.Direct3D11.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.DXGI.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.Direct2D1.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.RawInput.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\SharpDX.Direct3D9.xml
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\obj\x86\Debug\ae3210-LitJump.csprojResolveAssemblyReference.cache
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\obj\x86\Debug\ae3210-LitJump.dll
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\obj\x86\Debug\ae3210-LitJump.pdb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\particle.xnb

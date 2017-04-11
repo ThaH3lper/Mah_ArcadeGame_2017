@@ -41,6 +41,7 @@ namespace ae3210_LitJump {
             ContentManager.AddTexture("ground", Content.Load<Texture2D>("ground"));
             ContentManager.AddTexture("poop", Content.Load<Texture2D>("poop"));
             ContentManager.AddTexture("top", Content.Load<Texture2D>("top"));
+            ContentManager.AddTexture("particle", Content.Load<Texture2D>("particle"));
         }
 
         protected override void UnloadContent() {
