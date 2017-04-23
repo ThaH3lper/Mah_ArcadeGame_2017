@@ -37,6 +37,11 @@ namespace ae3210_LitJump {
             drawBox.X = x;
             drawBox.Y = y;
         }
+        public void SetDrawBoxSize(int w, int h)
+        {
+            drawBox.Width = w;
+            drawBox.Height = h;
+        }
 
         public Rectangle getDrawBox() {
             return drawBox;
@@ -52,6 +57,11 @@ namespace ae3210_LitJump {
 
         public void SetSourceBox(Rectangle rec) {
             sourceBox = rec;
+        }
+
+        public void SetOpacity(float amount)
+        {
+            color = new Color(Color.White.ToVector4()) * amount;
         }
 
         public virtual void Render(SpriteBatch spriteBatch) {

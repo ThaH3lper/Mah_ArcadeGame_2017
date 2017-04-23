@@ -40,9 +40,6 @@ namespace ae3210_LitJump {
 
         public void Update(float delta) {
             world.Update(delta);
-            if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed) {
-                world.dog.setNextState(DogState.FLY_AWAY);
-            }
             if (world.dog.GetState() == DogState.POOPING) {
                 joinOverlay.Update(delta);
                 inputController.Update();

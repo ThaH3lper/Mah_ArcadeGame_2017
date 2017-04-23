@@ -9,14 +9,14 @@ namespace ae3210_LitJump {
 
         private static int size = 10;
 
-        float lifeTime = 0.2f, opacityFade = 4;
+        float lifeTime = 0.1f, opacityFade = 4;
         Vector2 velocity, position;
         float speed;
         float opacity;
 
         public Particle(Vector2 position, Vector2 velocity) : base(0, 0, size, size, Color.White, "particle") {
             opacity = 1f;
-            speed = (float)(ContentManager.R.NextDouble() * 50) + 100;
+            speed = (float)(ContentManager.R.NextDouble() * 50) + 200;
             this.velocity = velocity;
             this.position = position;
         }
@@ -34,7 +34,7 @@ namespace ae3210_LitJump {
             if(lifeTime < 0)
             {
                 opacity -= delta * opacityFade;
-                color.A = (byte)(opacity * 255);
+                color = new Color(Color.White.ToVector4()) * opacity;
             }
             
         }

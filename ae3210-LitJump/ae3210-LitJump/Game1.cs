@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -42,6 +43,16 @@ namespace ae3210_LitJump {
             ContentManager.AddTexture("poop", Content.Load<Texture2D>("poop"));
             ContentManager.AddTexture("top", Content.Load<Texture2D>("top"));
             ContentManager.AddTexture("particle", Content.Load<Texture2D>("particle"));
+            ContentManager.AddTexture("bg", Content.Load<Texture2D>("bg"));
+            ContentManager.AddTexture("chain", Content.Load<Texture2D>("chain"));
+            ContentManager.AddTexture("glass", Content.Load<Texture2D>("glass"));
+            ContentManager.AddTexture("gun", Content.Load<Texture2D>("gun"));
+            ContentManager.AddTexture("control", Content.Load<Texture2D>("control"));
+            ContentManager.AddTexture("plank", Content.Load<Texture2D>("plank"));
+
+            ContentManager.AddSound("uzi", Content.Load<SoundEffect>("uzi"));
+            ContentManager.AddSound("win", Content.Load<SoundEffect>("win"));
+            ContentManager.AddSound("bow", Content.Load<SoundEffect>("bow"));
         }
 
         protected override void UnloadContent() {

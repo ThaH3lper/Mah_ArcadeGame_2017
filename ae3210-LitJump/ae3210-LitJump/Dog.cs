@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,6 +51,7 @@ namespace ae3210_LitJump {
         private void EnterState(DogState state) {
             switch (currentState) {
                 case DogState.EYEBROW:
+                    ContentManager.GetSound("bow").Play();
                     currnetTime = 0;
                     break;
                 case DogState.SLIDE_IN_TO_START:
@@ -104,6 +106,12 @@ namespace ae3210_LitJump {
                     dog.SetDrawBoxPos((int)(dog.getDrawBox().X + delta * 1000), (int)(dog.getDrawBox().Y));
                     if (dog.getDrawBox().X > -150)
                         setNextState(DogState.POOPING);
+                    break;
+                case DogState.POOPING:
+                    if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed)
+                    {
+                        setNextState(DogState.FLY_AWAY);
+                    }
                     break;
                 case DogState.FLY_AWAY:
                     dog.SetDrawBoxPos((int)(dog.getDrawBox().X + delta * 3000), (int)(dog.getDrawBox().Y));

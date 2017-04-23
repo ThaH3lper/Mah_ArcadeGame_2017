@@ -13,7 +13,7 @@ namespace ae3210_LitJump {
 
         int players = 0;
         float slowmotion;
-        Box clearScreen, top, ground;
+        Box clearScreen, top, bg;
         bool gameStarted;
 
         float slowmotionTime;
@@ -23,15 +23,18 @@ namespace ae3210_LitJump {
         public ParticleManager particleManager;
 
         public Dog dog;
+        public Poop poop;
         private GameScreen screen;
 
         public World(GameScreen screen) {
             this.screen = screen;
+            bg = new Box(0, 0, ContentManager.SCREEN_WIDTH, ContentManager.SCREEN_HEIGHT, Color.White, "bg");
             gameObjects.Add(new Box(0, ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT, ContentManager.SCREEN_WIDTH, ContentManager.FLOOR_HEIGHT, Color.White, "ground"));
             top = new Box(0, ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT - 48, ContentManager.SCREEN_WIDTH, 48, Color.White, "top");
             clearScreen = new Box(0, 0, ContentManager.SCREEN_WIDTH, ContentManager.SCREEN_HEIGHT, Color.FromNonPremultiplied(255, 255, 255, 50));
             slowmotion = 1f;
             dog = new Dog();
+            poop = new Poop();
             particleManager = new ParticleManager();
         }
 
@@ -76,21 +79,28 @@ namespace ae3210_LitJump {
             foreach (Hero h in deleteHeros) {
                 heroes.Remove(h);
                 if (heroes.Count == 0) {
-                    GameOver();
+                    GameOver(h);
                 }
             }
             deleteHeros.Clear();
 
             dog.Update(delta);
+            poop.Update(delta);
             particleManager.Update(delta);
         }
 
-        private void GameOver() {
-            dog.setNextState(DogState.SLIDE_IN);
+        private void GameOver(Hero hero) {
             screen.ClearControllers();
             players = 0;
             MovingObject.Clear();
+            poop.Start(hero.GetBilBoard(), Restart);
         }
+
+        public void Restart()
+        {
+            dog.setNextState(DogState.SLIDE_IN);
+        }
+        
 
         public bool IsColliding(Rectangle rec, ref Rectangle collide) {
             foreach (Box b in gameObjects) {
@@ -107,6 +117,8 @@ namespace ae3210_LitJump {
                 ScreenManager.graphicDevice.Clear(Color.White);
             } else
                 clearScreen.Render(spriteBatch);
+
+            bg.Render(spriteBatch);
             foreach (Hero h in heroes)
                 h.Render(spriteBatch);
             foreach (Box b in gameObjects)
@@ -124,6 +136,7 @@ namespace ae3210_LitJump {
                 dog.GetState() == DogState.SLIDE_OUT) {
                 dog.Render(spriteBatch);
             }
+            poop.Render(spriteBatch);
         }
 
         public void AddPlayer(PlayerIndex pindex, PlayerInput pinput) {

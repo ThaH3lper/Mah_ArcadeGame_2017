@@ -17,12 +17,15 @@ namespace ae3210_LitJump {
         PlayerIndex playerIndex;
         PlayerInput playerInput;
 
+        HeroBilboard bilboard;
+
         public Hero(World world, Vector2 position, PlayerIndex pindex, PlayerInput pinput) : base(0, 0, 64, 64, Color.White, "poop") {
             this.world = world;
             this.position = position;
             sourceBox = new Rectangle(0, 0, 100, 100);
             playerIndex = pindex;
             playerInput = pinput;
+            bilboard = new HeroBilboard((int)position.X - 32, (int)position.Y, pindex, pinput);
         }
 
         public void IsColliding() {
@@ -35,6 +38,11 @@ namespace ae3210_LitJump {
         public Vector2 PositionButtom()
         {
             return new Vector2(position.X + drawBox.Width / 2, position.Y);
+        }
+
+        public Box GetBilBoard()
+        {
+            return bilboard;
         }
 
         public override void Update(float delta) {
@@ -68,12 +76,15 @@ namespace ae3210_LitJump {
 
             drawBox.X = (int)(position.X - WIDTH / 2f);
             drawBox.Y = (int)(position.Y - HEIGHT);
+
+            bilboard.SetYPos(drawBox.Y);
         }
 
         public override void Render(SpriteBatch spriteBatch) {
             if (killed)
                 return;
             base.Render(spriteBatch);
+            bilboard.Render(spriteBatch);
         }
 
         public bool IsDead() { return killed; }
