@@ -8,9 +8,11 @@ using System.Text;
 namespace ae3210_LitJump {
     class JoinOverlay {
 
-        Box halfSide;
+        Box join, tutorial, start;
         public JoinOverlay() {
-            halfSide = new Box(ContentManager.SCREEN_WIDTH / 2, 0, ContentManager.SCREEN_WIDTH / 2, ContentManager.SCREEN_HEIGHT, Color.Black);
+            join = new Box(ContentManager.SCREEN_WIDTH/4 * 3 - 250, 20, 532, 82, Color.White, "jointxt");
+            tutorial = new Box(ContentManager.SCREEN_WIDTH / 4 * 3 - (873 / 2), 300, 873, 262, Color.White, "tutorialtxt");
+            start = new Box(ContentManager.SCREEN_WIDTH / 4 * 3 - (529 / 2), 650, 529, 75, Color.White, "starttxt");
         }
 
         public void Update(float delta) {
@@ -18,7 +20,12 @@ namespace ae3210_LitJump {
         }
 
         public void Render(SpriteBatch spriteBatch) {
-            //halfSide.Render(spriteBatch);
+            join.Render(spriteBatch);
+            tutorial.Render(spriteBatch);
+            if (World.oneJoined)
+            {
+                start.Render(spriteBatch);
+            }
         }
     }
 }

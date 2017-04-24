@@ -1,15 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ae3210_LitJump
 {
-
-
     class Poop
     {
         public enum State
@@ -24,10 +19,12 @@ namespace ae3210_LitJump
         RestartCallback callback;
 
         State currentState;
-        Box poop, chain, glass;
+        Box poop, chain, glass, winner, restart;
+        SoundEffectInstance music;
 
         Gun gun1, gun2;
         float fireDelay;
+        float restartDelay;
 
         int SIZE = 200;
         int SPEED = 1000;
@@ -46,6 +43,8 @@ namespace ae3210_LitJump
             glass.SetSourceBox(new Rectangle(0, 0, 100, 150));
             gun1 = new Gun(SpriteEffects.None);
             gun2 = new Gun(SpriteEffects.FlipHorizontally);
+            winner = new Box(ContentManager.SCREEN_WIDTH/2 - 713/2, 250, 713, 129, Color.White, "wintxt");
+            restart = new Box(ContentManager.SCREEN_WIDTH / 2 - 595 / 2, 750, 595, 95, Color.White, "restarttxt");
 
         }
 
@@ -102,9 +101,13 @@ namespace ae3210_LitJump
                     }
                     gun1.Update(delta);
                     gun2.Update(delta);
-                    if(InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed)
+                    restartDelay += delta;
+                    if ((InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed ||
+                        InputHandler.GetButtonState(PlayerIndex.Two, PlayerInput.Start) == InputState.Pressed) && restartDelay > 3)
                     {
                         SetState(State.NONE);
+                        music.Stop();
+                        restartDelay = 0;
                         callback();
                     }
                     break;
@@ -117,7 +120,8 @@ namespace ae3210_LitJump
             winHeroBilBoard = bilBoard;
             winHeroBilBoard.SetDrawBoxSize(200, 60);
             winHeroBilBoard.SetDrawBoxPos(ContentManager.SCREEN_WIDTH / 2 - 100, ContentManager.SCREEN_HEIGHT / 2 + 130);
-            ContentManager.GetSound("win").Play();
+            music = ContentManager.GetSound("win").CreateInstance();
+            music.Play();
             SetState(State.FADE_IN);
         }
 
@@ -129,6 +133,11 @@ namespace ae3210_LitJump
                 winHeroBilBoard.Render(spriteBatch);
                 gun1.Render(spriteBatch);
                 gun2.Render(spriteBatch);
+                winner.Render(spriteBatch);
+                if(restartDelay > 3)
+                {
+                    restart.Render(spriteBatch);
+                }
             }
 
             if (currentState != State.NONE)

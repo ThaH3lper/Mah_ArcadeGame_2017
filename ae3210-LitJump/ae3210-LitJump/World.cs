@@ -13,14 +13,16 @@ namespace ae3210_LitJump {
 
         int players = 0;
         float slowmotion;
-        Box clearScreen, top, bg;
+        Box clearScreen, top, bg, web;
         bool gameStarted;
+        bool gameOver = false;
 
         float slowmotionTime;
 
         float INTERVAL = 3, current = 0;
 
         public ParticleManager particleManager;
+        public static bool oneJoined = false;
 
         public Dog dog;
         public Poop poop;
@@ -32,6 +34,8 @@ namespace ae3210_LitJump {
             gameObjects.Add(new Box(0, ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT, ContentManager.SCREEN_WIDTH, ContentManager.FLOOR_HEIGHT, Color.White, "ground"));
             top = new Box(0, ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT - 48, ContentManager.SCREEN_WIDTH, 48, Color.White, "top");
             clearScreen = new Box(0, 0, ContentManager.SCREEN_WIDTH, ContentManager.SCREEN_HEIGHT, Color.FromNonPremultiplied(255, 255, 255, 50));
+            web = new Box(0, 0, 467/2, 62/2, Color.White, "webtxt");
+            web.SetSourceBox(new Rectangle(0, 0, 467, 62));
             slowmotion = 1f;
             dog = new Dog();
             poop = new Poop();
@@ -47,7 +51,7 @@ namespace ae3210_LitJump {
             //    slowmotion = 1f;
 
             //delta *= slowmotion;
-            if (dog.GetState() == DogState.FLY_AWAY || dog.GetState() == DogState.IDLE) {
+            if ((dog.GetState() == DogState.FLY_AWAY || dog.GetState() == DogState.IDLE) && !gameOver) {
                 current += delta * MovingObject.SPEED / 300f;
                 if (current > INTERVAL) {
                     current = 0;
@@ -90,14 +94,17 @@ namespace ae3210_LitJump {
         }
 
         private void GameOver(Hero hero) {
+            gameOver = true;
             screen.ClearControllers();
             players = 0;
-            MovingObject.Clear();
             poop.Start(hero.GetBilBoard(), Restart);
+            oneJoined = false;
         }
 
         public void Restart()
         {
+            gameOver = false;
+            MovingObject.Clear();
             dog.setNextState(DogState.SLIDE_IN);
         }
         
@@ -136,6 +143,7 @@ namespace ae3210_LitJump {
                 dog.GetState() == DogState.SLIDE_OUT) {
                 dog.Render(spriteBatch);
             }
+            web.Render(spriteBatch);
             poop.Render(spriteBatch);
         }
 

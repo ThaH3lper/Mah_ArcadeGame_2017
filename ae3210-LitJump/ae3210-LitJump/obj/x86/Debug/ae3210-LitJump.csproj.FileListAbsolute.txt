@@ -102,4 +102,10 @@ D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bi
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\plank.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\uzi.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\win.xnb
-D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\bow.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\jointxt.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\restarttxt.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\starttxt.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\tutorialtxt.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\webtxt.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\wintxt.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\wistle.xnb

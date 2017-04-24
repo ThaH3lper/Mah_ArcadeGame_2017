@@ -50,9 +50,16 @@ namespace ae3210_LitJump {
             ContentManager.AddTexture("control", Content.Load<Texture2D>("control"));
             ContentManager.AddTexture("plank", Content.Load<Texture2D>("plank"));
 
+            ContentManager.AddTexture("jointxt", Content.Load<Texture2D>("jointxt"));
+            ContentManager.AddTexture("restarttxt", Content.Load<Texture2D>("restarttxt"));
+            ContentManager.AddTexture("starttxt", Content.Load<Texture2D>("starttxt"));
+            ContentManager.AddTexture("tutorialtxt", Content.Load<Texture2D>("tutorialtxt"));
+            ContentManager.AddTexture("webtxt", Content.Load<Texture2D>("webtxt"));
+            ContentManager.AddTexture("wintxt", Content.Load<Texture2D>("wintxt"));
+
             ContentManager.AddSound("uzi", Content.Load<SoundEffect>("uzi"));
             ContentManager.AddSound("win", Content.Load<SoundEffect>("win"));
-            ContentManager.AddSound("bow", Content.Load<SoundEffect>("bow"));
+            ContentManager.AddSound("bow", Content.Load<SoundEffect>("wistle"));
         }
 
         protected override void UnloadContent() {

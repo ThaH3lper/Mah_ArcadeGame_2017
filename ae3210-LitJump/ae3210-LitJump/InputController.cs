@@ -23,8 +23,8 @@ namespace ae3210_LitJump {
         World world;
         ArcadeButton[] buttons = new ArcadeButton[12];
 
-        Point player1buttons = new Point(ContentManager.SCREEN_WIDTH / 2 + 100, ContentManager.SCREEN_HEIGHT / 2);
-        Point player2buttons = new Point(ContentManager.SCREEN_WIDTH / 2 + 500, ContentManager.SCREEN_HEIGHT / 2);
+        Point player1buttons = new Point(ContentManager.SCREEN_WIDTH / 4 * 3 - 250, 150);
+        Point player2buttons = new Point(ContentManager.SCREEN_WIDTH / 4 * 3 + 150, 150);
 
         bool activated = true;
         public InputController(World world) {
@@ -82,6 +82,7 @@ namespace ae3210_LitJump {
                 if (!buttons[index].IsActivate()) {
                     buttons[index].setActive(true);
                     world.AddPlayer(pindex, pinput);
+                    World.oneJoined = true;
                 }
                 buttons[index].Pressed();
             }

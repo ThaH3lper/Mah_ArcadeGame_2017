@@ -108,7 +108,8 @@ namespace ae3210_LitJump {
                         setNextState(DogState.POOPING);
                     break;
                 case DogState.POOPING:
-                    if (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed)
+                    if (World.oneJoined && (InputHandler.GetButtonState(PlayerIndex.One, PlayerInput.Start) == InputState.Pressed ||
+                       InputHandler.GetButtonState(PlayerIndex.Two, PlayerInput.Start) == InputState.Pressed))
                     {
                         setNextState(DogState.FLY_AWAY);
                     }
