@@ -12,6 +12,7 @@ namespace ae3210_LitJump {
 
         bool onGround;
         bool killed;
+        bool forceDown;
 
         World world;
         PlayerIndex playerIndex;
@@ -35,9 +36,9 @@ namespace ae3210_LitJump {
             }
         }
 
-        public Vector2 PositionButtom()
+        public Vector2 PositionMid()
         {
-            return new Vector2(position.X + drawBox.Width / 2, position.Y);
+            return new Vector2(position.X, position.Y - HEIGHT/2);
         }
 
         public Box GetBilBoard()
@@ -58,6 +59,11 @@ namespace ae3210_LitJump {
             if(world.IsColliding(drawBox, ref result)) {
                 position.Y = result.Top;
                 velocity = 0;
+                if (forceDown)
+                {
+                    forceDown = false;
+                    ContentManager.GetSound("land").Play();
+                }
                 onGround = true;
             } else if(velocity > 50){
                 onGround = false;
@@ -69,9 +75,11 @@ namespace ae3210_LitJump {
                 velocity = -1200;
                 onGround = false;
                 world.particleManager.SpawnUp(position + new Vector2(0, -10));
+                ContentManager.GetSound("jump").Play();
             }
             else if(InputHandler.GetButtonState(playerIndex, playerInput) == InputState.Pressed) {
                 velocity += 1200;
+                forceDown = true;
             }
 
             drawBox.X = (int)(position.X - WIDTH / 2f);

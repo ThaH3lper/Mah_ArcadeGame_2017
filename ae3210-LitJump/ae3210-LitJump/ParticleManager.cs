@@ -5,12 +5,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ae3210_LitJump {
-    class ParticleManager {
+namespace ae3210_LitJump
+{
+    class ParticleManager
+    {
 
         List<Box> particles = new List<Box>();
         List<Box> deadParticles = new List<Box>();
-        public ParticleManager() {
+        public ParticleManager()
+        {
 
         }
 
@@ -19,7 +22,16 @@ namespace ae3210_LitJump {
             for (int i = 0; i < 10; i++)
             {
                 Vector2 velocity = new Vector2((float)(ContentManager.R.NextDouble() * 2f) - 1f, (float)(ContentManager.R.NextDouble() * 0.5f) - 1f);
-                particles.Add(new Particle(position, velocity));
+                particles.Add(new Particle(position, velocity, true));
+            }
+        }
+
+        public void Splash(Vector2 position)
+        {
+            for (int i = 0; i < 15; i++)
+            {
+                Vector2 velocity = new Vector2((float)(ContentManager.R.NextDouble() * 2f) - 1f, (float)(ContentManager.R.NextDouble() * 2f) - 1f);
+                particles.Add(new ParticleExpload(position, velocity, false));
             }
         }
 
@@ -36,10 +48,15 @@ namespace ae3210_LitJump {
             deadParticles.Clear();
         }
 
-        public void Render(SpriteBatch spriteBatch)
+        public void Render(SpriteBatch spriteBatch, bool under)
         {
             foreach (Particle p in particles)
-                p.Render(spriteBatch);
+            {
+                if (p.isUnder() == under)
+                {
+                    p.Render(spriteBatch);
+                }
+            }
         }
     }
 }

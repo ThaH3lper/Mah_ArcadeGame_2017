@@ -52,11 +52,12 @@ namespace ae3210_LitJump {
 
             //delta *= slowmotion;
             if ((dog.GetState() == DogState.FLY_AWAY || dog.GetState() == DogState.IDLE) && !gameOver) {
+                if (MovingObject.SPEED < 1700)
+                    MovingObject.SPEED += (delta * 25);
                 current += delta * MovingObject.SPEED / 300f;
                 if (current > INTERVAL) {
                     current = 0;
                     gameObjects.Add(new MovingObject());
-                    MovingObject.SPEED += 40;
                 }
             }
 
@@ -78,10 +79,14 @@ namespace ae3210_LitJump {
             foreach (Hero h in heroes) {
                 h.IsColliding();
                 if (h.IsDead())
+                {
                     deleteHeros.Add(h);
+                }
             }
             foreach (Hero h in deleteHeros) {
                 heroes.Remove(h);
+                particleManager.Splash(h.PositionMid());
+                ContentManager.GetSound("jump").Play();
                 if (heroes.Count == 0) {
                     GameOver(h);
                 }
@@ -136,13 +141,14 @@ namespace ae3210_LitJump {
                 dog.GetState() != DogState.SLIDE_OUT) {
                 dog.Render(spriteBatch);
             }
-            particleManager.Render(spriteBatch);
+            particleManager.Render(spriteBatch, true);
             top.Render(spriteBatch);
             if(dog.GetState() == DogState.SLIDE_IN ||
                 dog.GetState() == DogState.EYEBROW ||
                 dog.GetState() == DogState.SLIDE_OUT) {
                 dog.Render(spriteBatch);
             }
+            particleManager.Render(spriteBatch, false);
             web.Render(spriteBatch);
             poop.Render(spriteBatch);
         }

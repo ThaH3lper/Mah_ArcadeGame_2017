@@ -49,6 +49,7 @@ namespace ae3210_LitJump {
             ContentManager.AddTexture("gun", Content.Load<Texture2D>("gun"));
             ContentManager.AddTexture("control", Content.Load<Texture2D>("control"));
             ContentManager.AddTexture("plank", Content.Load<Texture2D>("plank"));
+            ContentManager.AddTexture("logo", Content.Load<Texture2D>("steak_arts_mega"));
 
             ContentManager.AddTexture("jointxt", Content.Load<Texture2D>("jointxt"));
             ContentManager.AddTexture("restarttxt", Content.Load<Texture2D>("restarttxt"));
@@ -60,6 +61,8 @@ namespace ae3210_LitJump {
             ContentManager.AddSound("uzi", Content.Load<SoundEffect>("uzi"));
             ContentManager.AddSound("win", Content.Load<SoundEffect>("win"));
             ContentManager.AddSound("bow", Content.Load<SoundEffect>("wistle"));
+            ContentManager.AddSound("jump", Content.Load<SoundEffect>("jump"));
+            ContentManager.AddSound("land", Content.Load<SoundEffect>("land"));
         }
 
         protected override void UnloadContent() {
@@ -76,6 +79,8 @@ namespace ae3210_LitJump {
         }
 
         protected override void Draw(GameTime gameTime) {
+            GraphicsDevice.Clear(Color.White);
+
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             ScreenManager.Render(spriteBatch);
             spriteBatch.End();

@@ -52,6 +52,7 @@
     <Compile Include="LoadingScreen.cs" />
     <Compile Include="Object\MovingObject.cs" />
     <Compile Include="Particle.cs" />
+    <Compile Include="ParticleExpload.cs" />
     <Compile Include="ParticleManager.cs" />
     <Compile Include="Poop.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

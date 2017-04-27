@@ -12,7 +12,8 @@ namespace ae3210_LitJump {
         }
 
         public void Render(SpriteBatch spriteBatch) {
-            spriteBatch.Draw(ContentManager.GetTexture("pixel"), new Rectangle(0, 0, 100, 100), Color.Red);
+            spriteBatch.Draw(ContentManager.GetTexture("logo"), new Rectangle(ContentManager.SCREEN_WIDTH/2 - 1407/2, 
+                ContentManager.SCREEN_HEIGHT/2 - 329/2, 1407, 329), Color.White);
         }
 
         public void Show() {
@@ -20,7 +21,7 @@ namespace ae3210_LitJump {
 
         public void Update(float delta) {
             currentTime += delta;
-            if (currentTime >= 1f)
+            if (currentTime >= 3.5f)
                 ScreenManager.SetCurrentScreen("game");
         }
     }

@@ -109,3 +109,6 @@ D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bi
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\webtxt.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\wintxt.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\wistle.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\steak_arts_mega.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\jump.xnb
+D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\land.xnb
