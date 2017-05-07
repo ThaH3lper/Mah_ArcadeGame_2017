@@ -52,7 +52,7 @@ namespace ae3210_LitJump {
 
             //delta *= slowmotion;
             if ((dog.GetState() == DogState.FLY_AWAY || dog.GetState() == DogState.IDLE) && !gameOver) {
-                if (MovingObject.SPEED < 1700)
+                if (MovingObject.SPEED < 1600)
                     MovingObject.SPEED += (delta * 25);
                 current += delta * MovingObject.SPEED / 300f;
                 if (current > INTERVAL) {

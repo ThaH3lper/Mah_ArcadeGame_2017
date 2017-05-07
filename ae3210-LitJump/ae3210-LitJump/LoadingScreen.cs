@@ -21,7 +21,7 @@ namespace ae3210_LitJump {
 
         public void Update(float delta) {
             currentTime += delta;
-            if (currentTime >= 3.5f)
+            if (currentTime >= 0f)
                 ScreenManager.SetCurrentScreen("game");
         }
     }

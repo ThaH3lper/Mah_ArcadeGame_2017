@@ -7,8 +7,9 @@ using System.Text;
 namespace ae3210_LitJump.Object {
     class MovingObject : Box{
 
-        public static float SPEED = 400f;
-        private static float ORGINAL_SPEED = 400;
+        public static float SPEED = 900f;
+        private static float ORGINAL_SPEED = 900;
+        private static int LAST_HEIGHT = 1;
         public MovingObject() : base(0, 0, 10, 10, Color.White, "plank"){
             drawBox.Width = ContentManager.R.Next(1, 5) * 40 - 3;
             drawBox.Height = ContentManager.R.Next(50, 180);
@@ -16,13 +17,28 @@ namespace ae3210_LitJump.Object {
             sourceBox.Height = drawBox.Height;
             drawBox.X = ContentManager.SCREEN_WIDTH;
 
-            if (SPEED >= 1200 && ContentManager.R.Next(1, 10) > 7)
+            switch(ContentManager.R.Next(1, 6))
             {
-                drawBox.Y = ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT - drawBox.Height - 100;
-            }
-            else
-            {
-                drawBox.Y = ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT - drawBox.Height;
+                case 3:
+                case 1:
+                    drawBox.Width = 5 * 40 - 3;
+                    drawBox.Height = 150 * LAST_HEIGHT;
+                    sourceBox.Width = drawBox.Width;
+                    drawBox.Y = ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT - drawBox.Height;
+                    LAST_HEIGHT++;
+                    if (LAST_HEIGHT >= 4)
+                        LAST_HEIGHT = 3;
+                    break;
+
+                case 2:
+                    drawBox.Y = ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT - drawBox.Height - 100;
+                    LAST_HEIGHT = 1;
+                    break;
+
+                default:
+                    drawBox.Y = ContentManager.SCREEN_HEIGHT - ContentManager.FLOOR_HEIGHT - drawBox.Height;
+                    LAST_HEIGHT = 1;
+                    break;
             }
         }
 
@@ -31,7 +47,8 @@ namespace ae3210_LitJump.Object {
         }
 
         public static void Clear() {
-            SPEED = ORGINAL_SPEED; 
+            SPEED = ORGINAL_SPEED;
+            LAST_HEIGHT = 1;
         }
     }
 }

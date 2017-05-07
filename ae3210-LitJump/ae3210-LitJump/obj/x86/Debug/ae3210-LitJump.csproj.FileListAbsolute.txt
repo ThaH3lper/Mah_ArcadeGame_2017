@@ -112,3 +112,21 @@ D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bi
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\steak_arts_mega.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\jump.xnb
 D:\Documents and projects\Sourcetree\ArcadeGame\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\land.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\bg.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\chain.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\control.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\glass.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\gun.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\jointxt.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\jump.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\land.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\plank.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\restarttxt.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\starttxt.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\steak_arts_mega.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\tutorialtxt.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\uzi.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\webtxt.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\win.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\wintxt.xnb
+D:\SourceTree\Arcade\ae3210-LitJump\ae3210-LitJump\bin\Windows\Debug\Content\wistle.xnb

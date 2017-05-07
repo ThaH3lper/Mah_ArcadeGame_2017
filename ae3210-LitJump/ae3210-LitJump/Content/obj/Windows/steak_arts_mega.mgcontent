@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/steak_arts_mega.png</SourceFile>
-  <SourceTime>2017-04-24T17:31:13.106769+02:00</SourceTime>
-  <DestFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/steak_arts_mega.xnb</DestFile>
-  <DestTime>2017-04-27T19:24:34.627048+02:00</DestTime>
+  <SourceFile>D:/SourceTree/Arcade/ae3210-LitJump/ae3210-LitJump/Content/steak_arts_mega.png</SourceFile>
+  <SourceTime>2017-04-28T09:17:19.8816139+02:00</SourceTime>
+  <DestFile>D:/SourceTree/Arcade/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/steak_arts_mega.xnb</DestFile>
+  <DestTime>2017-04-28T09:21:47.1376748+02:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2015-04-29T19:14:44+02:00</ImporterTime>
+  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2015-04-29T19:14:44+02:00</ProcessorTime>
+  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>
