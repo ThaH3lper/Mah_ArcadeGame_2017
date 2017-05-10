@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>D:/SourceTree/Arcade/ae3210-LitJump/ae3210-LitJump/Content/land.wav</SourceFile>
-  <SourceTime>2017-04-28T09:17:19.8425848+02:00</SourceTime>
-  <DestFile>D:/SourceTree/Arcade/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/land.xnb</DestFile>
-  <DestTime>2017-04-28T09:21:47.3826934+02:00</DestTime>
+  <SourceFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/land.wav</SourceFile>
+  <SourceTime>2017-04-23T21:27:22.0103996+02:00</SourceTime>
+  <DestFile>D:/Documents and projects/Sourcetree/ArcadeGame/ae3210-LitJump/ae3210-LitJump/Content/bin/Windows/land.xnb</DestFile>
+  <DestTime>2017-05-10T20:45:33.8921856+02:00</DestTime>
   <Importer>WavImporter</Importer>
-  <ImporterTime>2017-03-01T16:05:36+01:00</ImporterTime>
+  <ImporterTime>2015-04-29T19:14:44+02:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>
-  <ProcessorTime>2017-03-01T16:05:36+01:00</ProcessorTime>
+  <ProcessorTime>2015-04-29T19:14:44+02:00</ProcessorTime>
   <Parameters>
     <Key>Quality</Key>
     <Value>Best</Value>
